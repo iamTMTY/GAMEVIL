@@ -1,0 +1,30 @@
+$text-1: 0.6rem;
+$text-2: 0.8rem;
+$text-3: 1rem;
+$header-1: 1.2rem;
+$header-2: 1.5rem;
+$header-3: 25px;
+$header-4: 30px;
+$primary-color: #0BFF06;
+$grey: #1a1a1a;
+$white: #fff;
+$black: #000;
+$padding-1: 5px;
+$padding-2: 10px;
+$padding-3: 15px;
+$padding-4: 20px;
+$padding-5: 30px;
+$padding-6: 40px;
+$padding-7: 50px;
+
+
+@media only screen and (max-width: 800px) {
+
+    $text-1: 0.5rem;
+    $text-2: 0.6rem;
+    $text-3: 0.7rem;
+    $header-1: 1rem;
+    $header-2: 1.2rem;
+    $header-3: 1.5rem;
+    // $header-4: 30px;
+}

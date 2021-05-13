@@ -1,0 +1,107 @@
+@import "../presets/variables";
+
+.cards-slider {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #1a191a;
+	padding: 30px 35px 30px;
+	margin-bottom: 50px;
+	overflow: hidden;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+
+	&:hover {
+		.previous,
+		.previous-icon,
+		.next,
+		.next-icon {
+			display: flex;
+		}
+	}
+
+	@media only screen and (max-width: 800px) {
+		border-bottom-left-radius: 0px;
+		border-top-left-radius: 0px;
+		padding: 10px 20px;
+		// background-color: transparent;
+
+		&:hover {
+			.previous,
+			.previous-icon,
+			.next,
+			.next-icon {
+				// display: none;
+			}
+		}
+	}
+}
+
+.previous {
+	// display: none;
+	position: absolute;
+	left: -7px;
+	cursor: pointer;
+	&:hover + .previous-icon {
+		color: $primary-color;
+	}
+}
+
+.previous,
+.previous-icon,
+.next,
+.next-icon {
+	z-index: 10;
+}
+
+.previous-icon {
+	position: absolute;
+	left: 0;
+	// top: 50%;
+	bottom: 49%;
+	cursor: pointer;
+	// display: none;
+
+	&:hover {
+		color: $primary-color;
+	}
+}
+
+.next {
+	// display: none;
+	transform-origin: center;
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 33%;
+	right: -6px;
+	cursor: pointer;
+
+	&:hover + .next-icon {
+		color: $primary-color;
+	}
+
+	// &:a
+}
+
+.next-icon {
+	// display: none;
+	position: absolute;
+	right: 0;
+	bottom: 49%;
+	cursor: pointer;
+
+	&:hover {
+		color: $primary-color;
+	}
+}
+
+.custom-scroll {
+	display: flex;
+}
+
+.thumb-horizontal {
+	background-color: rgb(0, 221, 0);
+	border-radius: 5px;
+	cursor: pointer;
+}

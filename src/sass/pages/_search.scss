@@ -1,0 +1,141 @@
+#search {
+	padding: 0 0 30px 0;
+	display: flex;
+	position: relative;
+	justify-content: flex-end;
+
+	@media only screen and (max-width: 800px) {
+		flex-direction: column;
+		justify-content: start;
+		padding: 10px 0 30px;
+	}
+}
+
+.search-content {
+	width: 70%;
+	padding-left: 5%;
+	margin-top: 40px;
+
+	@media only screen and (max-width: 800px) {
+		width: 100%;
+		margin-top: 0;
+		padding: 0 5%;
+	}
+}
+
+.search-header {
+	h1 {
+		@media only screen and (max-width: 800px) {
+			font-size: $header-1;
+		}
+
+		@media only screen and (max-width: 800px) {
+			font-size: $text-3;
+		}
+	}
+}
+
+.search-results {
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+
+	@media only screen and (max-width: 800px) {
+		margin-top: 20px;
+		justify-content: space-evenly;
+	}
+}
+
+.product {
+	display: flex;
+	margin-bottom: 50px;
+	margin-right: 50px;
+}
+
+.product-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 50px;
+
+	@media only screen and (max-width: 800px) {
+		margin: 0 0 0 20px;
+	}
+}
+
+.product-name {
+	padding: 0 0 3px;
+
+	p:hover {
+		color: #63f561;
+		cursor: pointer;
+	}
+}
+
+// .product-type {
+//     font-size: 12px;
+// }
+
+// .product-price {
+// 	margin: 5px 0;
+// }
+
+.add-product {
+	border: none;
+	width: 70%;
+	height: 40px;
+	cursor: pointer;
+	font-size: 15px;
+	// font-weight: 700;
+	background-color: #1a1a1a;
+	color: #06ffd2;
+	border-left: 1px solid #06ffd2;
+	transition: border 0.1s ease;
+
+	&:hover {
+		// color: $primary-color;
+		border-left-width: 10px;
+	}
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+}
+
+.page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35px;
+	margin: 0 5px;
+	height: 35px;
+	font-size: $text-1;
+	border: 1px solid #1a1a1a;
+
+	&:hover {
+		cursor: pointer;
+		border: 1px solid #63f561;
+	}
+}
+
+#current-page {
+	border: 1px solid $primary-color;
+	cursor: context-menu;
+}
+
+.search-header {
+	@media only screen and (max-width: 800px) {
+		text-align: center;
+	}
+}
+
+.search-card {
+	padding: 10px;
+	margin: 0 20px 20px 0;
+	border-radius: 10px;
+
+	@media only screen and (max-width: 800px) {
+		margin: 10px 5px;
+	}
+}

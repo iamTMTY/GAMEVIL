@@ -1,0 +1,407 @@
+#product {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-product {
+	display: flex;
+	padding: 50px 50px;
+
+	@media only screen and (max-width: 800px) {
+		padding: 50px 20px;
+	}
+
+	@media only screen and (max-width: 500px) {
+		justify-content: center;
+		padding: 10px 0px;
+	}
+}
+
+.product-images-and-description {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+
+	@media only screen and (max-width: 500px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.main-product-image_video {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-right: 50px;
+	width: unquote("max(30vw, 200px)");
+
+	@media only screen and (max-width: 800px) {
+		margin-right: 20px;
+	}
+
+	@media only screen and (max-width: 500px) {
+		display: none;
+	}
+}
+
+.mobile-image-slide {
+	display: none;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+
+	img {
+		scroll-snap-align: start;
+		width: 100%;
+		height: auto;
+	}
+
+	@media only screen and (max-width: 500px) {
+		display: flex;
+	}
+}
+
+.main-image {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: unquote("max(30vw, 200px)");
+	height: unquote("max(30vw, 200px)");
+}
+
+.other-images {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 10px;
+
+	& > div {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: unquote("max(5vw, 40px)");
+		height: unquote("max(5vw, 40px)");
+		background-color: #fff;
+		margin: 0 10px 10px 0;
+		border: 1px solid black;
+
+		&:hover {
+			border-color: $primary-color;
+			cursor: pointer;
+		}
+	}
+}
+
+.main-product-description {
+	@media only screen and (max-width: 500px) {
+		margin: 20px 0;
+		width: 90%;
+	}
+}
+
+.main-product-name {
+	font-size: $header-2;
+
+	@media only screen and (max-width: 800px) {
+		font-size: $header-1;
+	}
+}
+
+.main-product-rating {
+	i {
+		font-size: $header-1;
+		color: gold;
+	}
+}
+
+.main-product-price {
+	margin: 20px 0;
+	font-size: $header-1;
+
+	@media only screen and (max-width: 800px) {
+		font-size: $text-3;
+	}
+}
+
+.discounted-price {
+	font-size: $header-1;
+	font-weight: bold;
+	color: #06ffd2;
+
+	@media only screen and (max-width: 800px) {
+		font-size: $text-3;
+	}
+}
+
+.normal-price {
+	display: flex;
+	color: $primary-color;
+	font-size: $header-1;
+
+	p:first-child {
+		color: #077c67;
+		text-decoration: line-through;
+	}
+
+	p:last-child {
+		margin: 0 10px;
+	}
+
+	@media only screen and (max-width: 800px) {
+		font-size: $text-3;
+	}
+}
+
+.variation {
+	margin: 10px 0;
+
+	header {
+		margin-bottom: 5px;
+		font-size: $text-3;
+
+		@media only screen and (max-width: 800px) {
+			font-size: $text-2;
+		}
+	}
+}
+
+.variation-content {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: $text-3;
+
+	div {
+		padding: 10px;
+		margin: 0 5px 5px 0;
+		border: 1px solid #1a1a1a;
+
+		&:hover {
+			border-color: $primary-color;
+			cursor: pointer;
+		}
+	}
+
+	@media only screen and (max-width: 800px) {
+		font-size: $text-2;
+	}
+}
+
+.main-product-quantity {
+	font-size: $text-3;
+
+	header {
+		margin: 0 0 5px;
+	}
+
+	@media only screen and (max-width: 800px) {
+		font-size: 0.7rem;
+	}
+}
+
+.main-product-quantity-content {
+	display: flex;
+
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 30px;
+	}
+
+	div:first-child,
+	div:last-child {
+		border: 1px solid #1a1a1a;
+
+		&:hover {
+			border-color: $primary-color;
+			cursor: pointer;
+		}
+	}
+}
+
+.product-additional-details {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	header {
+		min-width: 50%;
+		display: flex;
+		justify-content: space-between;
+
+		h3 {
+			margin: 0 20px;
+
+			&:hover {
+				color: yellowgreen;
+				cursor: pointer;
+			}
+			@media only screen and (max-width: 500px) {
+				font-size: 12px;
+				margin: 0;
+			}
+		}
+
+		hr {
+			border-color: $primary-color;
+			display: none;
+		}
+
+		@media only screen and (max-width: 500px) {
+			width: 90%;
+		}
+	}
+
+	@media only screen and (max-width: 500px) {
+		margin-bottom: 20px;
+	}
+}
+
+#current-detail-header {
+	color: $primary-color;
+
+	hr {
+		display: block;
+	}
+}
+
+.additional-details-content {
+	width: 70%;
+	margin: 50px 0;
+
+	& > div {
+		display: none;
+	}
+
+	@media only screen and (max-width: 500px) {
+		width: 90%;
+		margin: 10px;
+	}
+}
+
+#current-detail {
+	display: block;
+}
+
+.action-buttons {
+	display: flex;
+	margin: 20px 0;
+
+	button {
+		margin: 5px 20px 0 0;
+		padding: 10px 30px;
+		color: white;
+		font-weight: bolder;
+		font-size: 1rem;
+		z-index: 1;
+		border: none;
+		background-color: purple;
+		cursor: pointer;
+		border-radius: 5px;
+	}
+
+	@media only screen and (max-width: 500px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.animate-button {
+	z-index: 4;
+	position: absolute;
+	border: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(30deg, $primary-color 100%, yellow 0%);
+}
+
+.overview {
+	@media only screen and (max-width: 500px) {
+		font-size: $text-2;
+		line-height: $text-3;
+	}
+}
+
+.spec {
+	display: flex;
+	font-size: $header-1;
+
+	@media only screen and (max-width: 800px) {
+		font-size: $text-3;
+		margin: 5px 0;
+	}
+}
+
+.spec-title {
+	font-weight: bold;
+
+	span {
+		margin: 0 10px;
+	}
+
+	@media only screen and (max-width: 500px) {
+		font-size: $text-2;
+	}
+}
+
+.spec-name {
+	@media only screen and (max-width: 500px) {
+		font-size: $text-2;
+	}
+}
+
+.review {
+	margin-bottom: 30px;
+}
+
+.reviewer-name_title {
+	display: flex;
+
+	& > p:first-child {
+		font-weight: bold;
+	}
+
+	p {
+		@media only screen and (max-width: 500px) {
+			font-size: 12px;
+		}
+	}
+
+	span {
+		margin: 0 10px;
+	}
+}
+
+.reviewer-comment {
+	font-size: $text-3;
+
+	@media only screen and (max-width: 800px) {
+		font-size: $text-2;
+	}
+}
+
+@keyframes button-bg {
+	0% {
+		background: linear-gradient(30deg, $primary-color 100%, yellow 0%);
+	}
+
+	25% {
+		background: linear-gradient(30deg, yellow 0%, $primary-color);
+	}
+
+	50% {
+		background: linear-gradient(30deg, yellow 10%, $primary-color);
+	}
+
+	75% {
+		background: linear-gradient(30deg, yellow 50%, $primary-color);
+	}
+
+	100% {
+		background: linear-gradient(30deg, yellow 100%, $primary-color 0%);
+	}
+}

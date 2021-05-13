@@ -1,0 +1,394 @@
+.cart {
+	width: 90%;
+	min-height: 60vh;
+	margin: 20px auto 50px;
+
+	@media only screen and (max-width: 800px) {
+		width: 98%;
+	}
+
+	// @media only screen and (max-width: 650px) {
+	// 	width: 98%;
+	// }
+}
+
+.no-cart {
+	margin: 20px 0;
+}
+
+.cart-header {
+	h1 {
+		font-size: $header-2;
+
+		@media only screen and (max-width: 800px) {
+			font-size: $header-1;
+		}
+
+		@media only screen and (max-width: 650px) {
+			font-size: $text-3;
+		}
+	}
+}
+
+.item {
+	display: flex;
+	border-radius: 5px;
+	padding: 10px 0;
+	margin-bottom: 10px;
+
+	& > div:nth-child(3) {
+		display: flex;
+		padding: 0 5%;
+		font-size: $text-3;
+
+		@media only screen and (max-width: 800px) {
+			padding: 0 2%;
+			font-size: $text-2;
+		}
+	}
+
+	& > div:not(:nth-child(3)) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: $text-3;
+
+		@media only screen and (max-width: 800px) {
+			font-size: $text-2;
+		}
+
+		@media only screen and (max-width: 650px) {
+			font-size: 0.7rem;
+		}
+
+		// @media only screen and (max-width: 500px) {
+		// 	font-size: $text-2;
+		// }
+	}
+
+	@media only screen and (max-width: 500px) {
+		padding: 10px;
+	}
+}
+
+.cart-content-header {
+	display: flex;
+	margin: 20px 0;
+
+	h2 {
+		text-transform: uppercase;
+		font-size: $text-2;
+		text-align: center;
+		color: #a5a5a5;
+
+		@media only screen and (max-width: 800px) {
+			font-size: 0.7rem;
+		}
+	}
+}
+
+.quantity-header,
+.item-quantity {
+	width: 10%;
+
+	@media only screen and (max-width: 649px) {
+		width: 0;
+		display: none;
+		overflow: hidden;
+	}
+}
+
+.item-header,
+.item-description-image {
+	width: 46%;
+
+	@media only screen and (max-width: 649px) {
+		width: 100%;
+	}
+}
+
+.item-header {
+	@media only screen and (max-width: 649px) {
+		display: none;
+	}
+}
+
+.unit-price-header,
+.item-unit-price {
+	width: 20%;
+
+	@media only screen and (max-width: 649px) {
+		width: 0;
+		display: none;
+		overflow: hidden;
+	}
+}
+
+.sub-total-header,
+.item-sub-total {
+	width: 20%;
+
+	@media only screen and (max-width: 649px) {
+		width: 0;
+		display: none;
+		overflow: hidden;
+	}
+}
+
+.total-price {
+	width: 20%; //same width as sub-total column
+
+	@media only screen and (max-width: 649px) {
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+		width: max-content;
+	}
+}
+
+.delete-item,
+.delete-header {
+	width: 4%;
+
+	@media only screen and (max-width: 649px) {
+		// width: 0;
+		// display: none;
+		overflow: hidden;
+	}
+}
+
+.quantity {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	// width: 70%;
+	padding: 2px 5px;
+	font-size: $text-2;
+
+	@media only screen and (max-width: 800px) {
+		font-size: 0.7rem;
+	}
+
+	i {
+		font-size: $text-3;
+		color: #5c5c5c;
+
+		@media only screen and (max-width: 800px) {
+			font-size: $text-2;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		i {
+			color: #63f561;
+		}
+	}
+}
+
+.item-description-image {
+	display: flex;
+	align-items: flex-start;
+}
+
+.item-image {
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 5px;
+	cursor: pointer;
+
+	@media only screen and (max-width: 649px) {
+		margin-left: 5px;
+	}
+
+	@media only screen and (max-width: 649px) {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+.item-description {
+	margin-left: 20px;
+
+	@media only screen and (max-width: 650px) {
+		margin-left: 10px;
+	}
+}
+
+.item-name {
+	&:hover {
+		color: #63f561;
+		cursor: pointer;
+	}
+}
+
+.item-category {
+	font-size: $text-1;
+}
+
+.delete-item {
+	display: flex;
+	align-items: center;
+	color: rgb(247, 103, 103);
+
+	i {
+		font-size: $header-2;
+		cursor: pointer;
+
+		@media only screen and (max-width: 800px) {
+			font-size: $header-1;
+		}
+	}
+}
+
+.item-sub-total {
+	color: #06ffd2;
+}
+
+// .item-unit-price, .item-sub-total {
+//     font-size: $text-2;
+
+//     @media only screen and (max-width: 500px) {
+//         font-size: 0.1rem;
+//     }
+// }
+
+.total-price-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	h3 {
+		font-size: $header-1;
+
+		@media only screen and (max-width: 800px) {
+			font-size: $text-3;
+		}
+
+		@media only screen and (max-width: 650px) {
+			font-size: $text-2;
+		}
+	}
+
+	span {
+		margin: 0 5px;
+	}
+
+	@media only screen and (max-width: 649px) {
+		justify-content: center;
+	}
+}
+
+.total-price {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #06ffd2;
+	font-weight: bold;
+}
+
+.checkout-or-continue {
+	margin: 20px 0;
+	display: flex;
+	justify-content: flex-end;
+
+	@media only screen and (max-width: 800px) {
+		margin: 5px 0;
+		flex-direction: column-reverse;
+		align-items: flex-end;
+		justify-content: start;
+	}
+
+	@media only screen and (max-width: 649px) {
+		align-items: center;
+	}
+}
+
+.custom-button {
+	padding: 1.2% 3.2%;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1rem;
+	cursor: pointer;
+
+	@media only screen and (max-width: 800px) {
+		padding: 2% 4%;
+	}
+}
+
+.continue-shopping {
+	color: #fff;
+	background-color: purple;
+	border: none;
+	margin: 5px 2% 5px 0;
+}
+
+.checkout {
+	color: #fff;
+	background-color: green;
+	border: none;
+	margin: 5px 2% 5px 0;
+}
+
+///mobile
+.mobile-quantity-price {
+	display: none;
+	margin: 10px 0;
+
+	@media only screen and (max-width: 649px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.mobile-quantity {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.qty {
+	padding: 0 5px;
+}
+
+.reduce-qty,
+.increase-qty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #1a1a1a;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+
+	&:hover {
+		border-color: $primary-color;
+	}
+}
+
+.mobile-price {
+	color: #06ffd2;
+}
+
+.mobile-delete-save {
+	display: none;
+
+	@media only screen and (max-width: 649px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	i {
+		font-size: $header-2;
+	}
+
+	i.delete {
+		color: rgb(250, 98, 98);
+	}
+}

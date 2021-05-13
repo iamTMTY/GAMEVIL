@@ -1,0 +1,19 @@
+.info-modal {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	display: flex;
+	padding: 5px 20px;
+	background-color: rgb(2, 105, 2);
+	z-index: 1000;
+}
+
+.info-modal-msg {
+	width: 100%;
+	text-align: center;
+}
+
+.close-info-modal {
+	cursor: pointer;
+	font-weight: bolder;
+}
