@@ -88,7 +88,6 @@ export default function ProductMain({ product }) {
 		});
 
 		localStorage.setItem("globalState", JSON.stringify(newState));
-		console.log(localStorage.getItem("globalState"));
 	}
 
 	return (
