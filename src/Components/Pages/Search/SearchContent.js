@@ -26,7 +26,16 @@ export default function SearchContent() {
 	if (products.isFetching) {
 		return <Spinner text={"Searching for results"} />;
 	} else {
-		return <SearchProducts result={products.data.data} />;
+		if (!products.data.data?.collectionByHandle && !products.data.data?.products) {
+			return (
+				<h1 style={{ width: "100%", textAlign: "center" }}>
+					{" "}
+					Sorry, no product in this category yet{" "}
+				</h1>
+			);
+		} else {
+			return <SearchProducts result={products.data.data} />;
+		}
 	}
 	// end
 }
