@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, HashRouter } from "react-router-dom";
 import "./App.scss";
 import Home from "./Components/Pages/Home/Home";
 import Product from "./Components/Pages/Product/Product";
@@ -21,7 +21,7 @@ function App() {
 	const [globalState, setGlobalState] = useState(initialState);
 
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<div className="App">
 				<Route
 					exact
@@ -65,7 +65,7 @@ function App() {
 					)}
 				/>
 			</div>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 

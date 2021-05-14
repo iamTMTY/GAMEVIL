@@ -3,9 +3,6 @@ import { useLocation } from "react-router-dom";
 import Header from "../../Header";
 import Footer from "../../Footer";
 import SearchMain from "./SearchMain";
-import Slider from "../../Slider/Slider";
-
-import Spinner from "../../Spinner";
 
 export default function Search() {
 	const location = useLocation();
@@ -17,7 +14,6 @@ export default function Search() {
 		<>
 			<Header previousSearch={searchHandle} />
 			<SearchMain />
-			{/* <Slider /> */}
 			<Footer />
 		</>
 	);

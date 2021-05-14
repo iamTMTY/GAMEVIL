@@ -61,8 +61,6 @@ export default function CartItems({ setProducts, products, price }) {
 						{" "}
 						+{" "}
 					</div>
-					{/* <p> {cart[index].quantity}x </p>
-					<i className="material-icons">expand_more</i> */}
 				</div>
 			</div>
 			<div className="item-description-image">
@@ -97,8 +95,6 @@ export default function CartItems({ setProducts, products, price }) {
 							<span>&#8358;</span>
 							{parseCurrency(price.subTotalPrice[index])}
 						</div>
-						{/* <i className="material-icons"></i> */}
-						{/* <i className="material-icons delete">delete</i> */}
 					</div>
 				</div>
 			</div>

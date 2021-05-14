@@ -7,7 +7,7 @@ import Slider from "../../Slider/Slider";
 import Spinner from "../../Spinner";
 
 export default function ProductContent() {
-	const urlArr = document.location.pathname.split("/");
+	const urlArr = document.location.hash.split("/");
 	const collectionHandle = urlArr[urlArr.length - 2];
 	const productHandle = urlArr[urlArr.length - 1];
 

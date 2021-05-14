@@ -7,7 +7,7 @@ import Spinner from "../../Spinner.js";
 export default function HomeProducts() {
 	const query = homeQuery;
 
-	const data = useFetch(query);
+	const data = useFetch(query, query);
 
 	if (data.isFetching) {
 		return <Spinner text={"Loading Products"} />;

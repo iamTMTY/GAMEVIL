@@ -1,5 +1,4 @@
 import React from "react";
-import Ratings from "../../Ratings";
 import Card from "../../Card";
 import { useLocation } from "react-router-dom";
 
@@ -30,8 +29,6 @@ export default function SearchProducts({ result }) {
 					</div>
 				))}
 			</div>
-			{/* <SearchProducts products={products} /> */}
-			{/* <Pagination content={searchInfo.products} contentPerPage={contentPerPage} /> */}
 		</section>
 	);
 }

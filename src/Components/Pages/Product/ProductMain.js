@@ -2,12 +2,9 @@ import React, { useState, useEffect, useContext, useRef } from "react";
 import { globalStateContext, setGlobalStateContext } from "../../../App";
 import ProductImages from "./ProductImages";
 import Ratings from "../../Ratings";
-import { productQuery } from "../../queries";
-import useFetch from "../../../CustomHooks/useFetch";
 
 export default function ProductMain({ product }) {
-	const urlArr = document.location.pathname.split("/");
-	// const collectionHandle = urlArr[urlArr.length - 2];
+	const urlArr = document.location.hash.split("/");
 	const productHandle = urlArr[urlArr.length - 1];
 
 	const globalState = useContext(globalStateContext);
@@ -29,10 +26,6 @@ export default function ProductMain({ product }) {
 	});
 
 	const [quantity, setQuantity] = useState(1);
-
-	// const overviewRef = useRef(null);
-	// const specificationsRef = useRef(null);
-	// const reviewsRef = useRef(null);
 
 	function showDetail(e) {
 		if (e.target.id === "current-detail-header") {

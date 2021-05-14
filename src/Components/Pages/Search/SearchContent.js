@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import Pagination from "../../Pagination";
 import SearchProducts from "./SearchProducts";
 import { searchProductQuery, searchCollectionQuery } from "../../queries";
 import useFetch from "../../../CustomHooks/useFetch";
