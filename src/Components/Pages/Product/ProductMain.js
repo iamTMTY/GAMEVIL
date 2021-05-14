@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, { useState, useContext } from "react";
 import { globalStateContext, setGlobalStateContext } from "../../../App";
 import ProductImages from "./ProductImages";
 import Ratings from "../../Ratings";
