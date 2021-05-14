@@ -28,9 +28,8 @@ export default function SearchContent() {
 	} else {
 		if (!products.data.data?.collectionByHandle && !products.data.data?.products) {
 			return (
-				<h1 style={{ width: "100%", textAlign: "center" }}>
-					{" "}
-					Sorry, no product in this category yet{" "}
+				<h1 style={{ width: "100%", textAlign: "center", minHeight: "60vh", marginTop: "50px" }}>
+					Sorry, no product in this category yet
 				</h1>
 			);
 		} else {

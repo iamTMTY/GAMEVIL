@@ -21,7 +21,12 @@ export default function ProductContent() {
 		return <Spinner text="Loading Product" />;
 	} else {
 		if (!product.data.data.productByHandle || !collection.data.data.collectionByHandle) {
-			return <h1> Page Not Found</h1>;
+			return (
+				<h1 style={{ width: "100%", textAlign: "center", minHeight: "60vh", marginTop: "50px" }}>
+					{" "}
+					Page Not Found
+				</h1>
+			);
 		} else {
 			return (
 				<>
